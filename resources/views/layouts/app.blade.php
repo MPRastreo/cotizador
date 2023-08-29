@@ -11,8 +11,18 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        {{-- LineIcons --}}
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        {{-- Axios HTTP Requests CDN --}}
+        <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@5.0.15/borderless.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        {{-- SweetAlert2 CDN --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -32,5 +42,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+        {{-- Scripts Section --}}
+        @yield('scripts')
     </body>
 </html>
